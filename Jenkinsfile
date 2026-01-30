@@ -4,11 +4,27 @@ pipeline {
     }
 
     stages {
-        stage('Hello') {
+
+        stage("Build") {
             steps {
-                echo 'Hello Jenkins'
+                echo("Hello Build")
             }
         }
+     stages {
+
+        stage("Test") {
+            steps {
+                echo("Hello Test")
+            }
+        }
+     stages {
+
+        stage('Deploy') {
+            steps {
+                echo("Hello Deploy")
+            }
+        }
+
     }
 
     post {
