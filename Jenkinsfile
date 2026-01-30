@@ -1,29 +1,28 @@
 pipeline {
     agent {
-      node {
-        lable "linux && java11"
-      }
+        label 'linux && java11'
     }
+
     stages {
-        stage("Hello") {
+        stage('Hello') {
             steps {
-                echo("Hello Pipeline")
+                echo 'Hello Jenkins'
             }
         }
     }
 
     post {
-      always {
-        echo "I will always say Hello again!"
-      }
-      success {
-        echo "Yay, success"
-      }
-      failure {
-        echo "Oh no, failure"
-      }
-      cleanup {
-        echo "Don't care success or error"
-      }
+        always {
+            echo 'I will always say Hello again!'
+        }
+        success {
+            echo 'Yay, success'
+        }
+        failure {
+            echo 'Oh no, failure'
+        }
+        cleanup {
+            echo 'Cleanup finished'
+        }
     }
 }
