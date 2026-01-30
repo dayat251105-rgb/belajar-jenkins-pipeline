@@ -2,24 +2,24 @@ pipeline {
     agent {
         label 'linux && java11'
     }
-   }
+
     stages {
 
         stage("Build") {
             steps {
-                echo("Hello Build")
+                echo "Hello Build"
             }
         }
 
         stage("Test") {
             steps {
-                echo("Hello Test")
+                echo "Hello Test"
             }
         }
 
         stage("Deploy") {
             steps {
-                echo("Hello Deploy")
+                echo "Hello Deploy"
             }
         }
 
